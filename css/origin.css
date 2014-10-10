@@ -1,0 +1,46 @@
+.align-left > * {
+	text-align: left;
+}
+
+.container ul {
+	margin: 0 auto;
+	list-style: none;
+}
+
+.text-ero {
+	color: #E766F6;
+}
+
+.text-girl {
+	color: #D76C7C;
+}
+
+.canvas {
+	width: 400px;
+	height: 400px;
+}
+
+ul {
+	padding:0;
+}
+li {
+	font-size:16px;
+}
+
+.fa-hatena:before {
+	content: "B!";
+	font-family: Verdana;
+	font-weight: bold;
+}
+.fa-dots:before {
+	content: "d.";
+	font-family: 'Hiragino Mincho ProN', serif;
+	font-weight: bold;
+}
+
+.fa-feedly:before {
+	content: url('../img/feedly.svg');
+}
+.fa-qiita:before {
+	content: url('../img/qiita.svg');
+};
