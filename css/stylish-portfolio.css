@@ -183,7 +183,7 @@ hr.small {
 
 .services {
     padding: 50px 0;
-    background: #428bca 50% 0 no-repeat fixed;
+    background: rgb(150,150,150) 50% 0 no-repeat fixed;
     min-height: 100%;
 }
 

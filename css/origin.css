@@ -10,6 +10,9 @@
 .text-ero {
 	color: #E766F6;
 }
+.text-language {
+	color: rgb(150,150,150)
+}
 
 .text-girl {
 	color: #D76C7C;
@@ -43,4 +46,13 @@ li {
 }
 .fa-qiita:before {
 	content: url('../img/qiita.svg');
-};
+}
+
+.fa-radar:before {
+	background: url('../img/radar.svg');
+	background-size:cover;
+	width: 1em;
+	height: 1em;
+	content: " ";
+	display: inline-block;
+}

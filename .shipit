@@ -1,0 +1,8 @@
+host='aozora0000'
+path='/usr/share/nginx/www'
+
+[deploy]
+git pull
+
+[status]
+uptime
