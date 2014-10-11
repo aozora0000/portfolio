@@ -62,10 +62,11 @@ $(function() {
     $.ajax({
         url: 'http://www.aozora0000.biz/contributions',
         type: 'GET',
+        dataType:'html',
         success: function(result) {
-            console.log(result);
-            $(result).appendTo("#contributions");
-            //$().append(result);
+            //document.getElementById("contributions").innerHTML(result);
+            //$(result).inner("#contributions");
+            $("#contributions").append(result);
         }
     });
 });
