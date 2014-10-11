@@ -1,6 +1,6 @@
 $(function() {
     //サイドバー開閉用
-    $("#menu-toggle,#menu-close").click(function(e) {
+    $("#menu-toggle,#menu-close,a[href*=#]").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
