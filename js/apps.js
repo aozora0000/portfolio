@@ -57,13 +57,26 @@ $(function() {
         datasetStroke : true,
     });
 });
-//GoogleAjaxFeedAPI作成
+// Github
+$(function() {
+    $.ajax({
+        url: 'http://www.aozora0000.biz/contributions',
+        type: 'GET',
+        success: function(result) {
+            $("#contributions").append(result);
+        }
+    });
+});
+
 google.load("feeds", "1");
+google.setOnLoadCallback(initialize);
+//GoogleAjaxFeedAPI作成
+
 function initialize() {
     var feed = new google.feeds.Feed("https://github.com/aozora0000.atom");
-    feed.setNumEntries(8);
+    feed.setNumEntries(5);
     feed.load(function (result){
-        var container = $("#feed");
+        var container = $("#logs");
         if (!result.error){
             for (var i = 0; i < result.feed.entries.length; i++) {
                 var entry = result.feed.entries[i];
@@ -74,10 +87,9 @@ function initialize() {
                     $("<p>").text(entry.contentSnippet),
                     $("<small>").text(entry.publishedDate)
                 )
-          }
+            }
         } else {
             container.append("現在アクティビティを取得出来ません。");
         }
     });
 }
-google.setOnLoadCallback(initialize);
