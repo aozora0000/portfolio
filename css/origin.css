@@ -74,3 +74,9 @@ li {
 .canvas {
 	width:100%;
 }
+
+.sidebar-nav i.fa {
+	width: 2em;
+	text-align:center;
+	margin-right: 1em;
+}
