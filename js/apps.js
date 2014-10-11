@@ -63,6 +63,7 @@ $(function() {
         url: 'http://www.aozora0000.biz/contributions',
         type: 'GET',
         success: function(result) {
+            console.log(result);
             $(result).appendTo("#contributions");
             //$().append(result);
         }
