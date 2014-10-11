@@ -63,7 +63,8 @@ $(function() {
         url: 'http://www.aozora0000.biz/contributions',
         type: 'GET',
         success: function(result) {
-            $("#contributions").append(result);
+            $(result).appendTo("#contributions");
+            //$().append(result);
         }
     });
 });
