@@ -57,3 +57,27 @@ $(function() {
         datasetStroke : true,
     });
 });
+//GoogleAjaxFeedAPI作成
+google.load("feeds", "1");
+function initialize() {
+    var feed = new google.feeds.Feed("https://github.com/aozora0000.atom");
+    feed.setNumEntries(8);
+    feed.load(function (result){
+        var container = $("#feed");
+        if (!result.error){
+            for (var i = 0; i < result.feed.entries.length; i++) {
+                var entry = result.feed.entries[i];
+                container.append(
+                    $("<h3>").append(
+                        $("<a>").attr("href",entry.link).text(entry.title)
+                    ),
+                    $("<p>").text(entry.contentSnippet),
+                    $("<small>").text(entry.publishedDate)
+                )
+          }
+        } else {
+            container.append("現在アクティビティを取得出来ません。");
+        }
+    });
+}
+google.setOnLoadCallback(initialize);

@@ -217,6 +217,13 @@ hr.small {
     height:100%;
 }
 
+.feeds {
+    padding: 50px 0;
+    background: rgb(243, 161, 161) 50% 0 no-repeat fixed;
+    min-height: 100%;
+    color: #FFF;
+}
+
 .portfolio-item {
     margin-bottom: 30px;
 }
