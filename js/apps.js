@@ -79,7 +79,7 @@ $(function() {
                         $("<a>").attr("href",value.url).text(value.title)
                     ),
                     $("<p>").append(
-                        new Date(value.created_at).toLocaleString(),
+                        moment(value.created_at).format("YYYY-MM-DD hh:mm"),
                         " ",
                         $("<b>").append(
                             $('<i class="fa fa-folder-o"></i>'),
