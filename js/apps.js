@@ -69,17 +69,39 @@ $(function() {
             $("#contributions").append(result);
         }
     });
+    $.ajax({
+        url: 'https://qiita.com/api/v1/users/aozora0000/items?per_page=100',
+        type: 'GET',
+        success: function(object) {
+            $.each(object,function(key,value) {
+                $("#qiita #logs").append(
+                    $("<h3>").append(
+                        $("<a>").attr("href",value.url).text(value.title)
+                    ),
+                    $("<p>").append(
+                        new Date(value.created_at).toLocaleString(),
+                        " ",
+                        $("<b>").append(
+                            $('<i class="fa fa-folder-o"></i>'),
+                            " ",
+                            value.stock_count
+                        )
+                    )
+                );
+            })
+        }
+    });
 });
 
 google.load("feeds", "1");
-google.setOnLoadCallback(initialize);
+google.setOnLoadCallback(github);
 //GoogleAjaxFeedAPI作成
 
-function initialize() {
+function github() {
     var feed = new google.feeds.Feed("https://github.com/aozora0000.atom");
     feed.setNumEntries(5);
     feed.load(function (result){
-        var container = $("#logs");
+        var container = $("#feed #logs");
         if (!result.error){
             for (var i = 0; i < result.feed.entries.length; i++) {
                 var entry = result.feed.entries[i];

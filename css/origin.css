@@ -75,7 +75,8 @@ li {
 	width:100%;
 }
 
-.sidebar-nav i.fa {
+.sidebar-nav i.fa,
+.sidebar-nav .fa-stack {
 	width: 2em;
 	text-align:center;
 	margin-right: 1em;

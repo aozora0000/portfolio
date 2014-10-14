@@ -251,15 +251,13 @@ hr.small {
 }
 
 /* Map */
-
-.map {
-    height: 500px;
+.qiita {
+    padding: 50px 0;
+    background: rgb(255,255,255) 50% 0 no-repeat fixed;
+    min-height: 100%;
 }
-
-@media(max-width:768px) {
-    .map {
-        height: 75%;
-    }
+.qiita #logs {
+    max-height: 80% !important;
 }
 
 /* Footer */
