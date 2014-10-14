@@ -79,7 +79,7 @@ $(function() {
                         $("<a>").attr("href",value.url).text(value.title)
                     ),
                     $("<p>").append(
-                        moment(value.created_at).format("YYYY-MM-DD hh:mm"),
+                        moment(value.created_at.substring(0, 19)).add(9,"hours").format("YYYY-MM-DD hh:mm"),
                         " ",
                         $("<b>").append(
                             $('<i class="fa fa-folder-o"></i>'),
