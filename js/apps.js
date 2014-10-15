@@ -70,7 +70,7 @@ $(function() {
         }
     });
     $.ajax({
-        url: 'https://qiita.com/api/v1/users/aozora0000/items?per_page=100',
+        url: 'http://www.aozora0000.biz/qiita/',
         type: 'GET',
         success: function(object) {
             $.each(object,function(key,value) {
