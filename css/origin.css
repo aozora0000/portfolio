@@ -73,6 +73,10 @@ li {
 
 .canvas {
 	width:100%;
+	height: 100%;
+}
+#chart > .container {
+	background: rgba(255,255,255,.7);
 }
 
 .sidebar-nav i.fa,
@@ -80,4 +84,8 @@ li {
 	width: 2em;
 	text-align:center;
 	margin-right: 1em;
+}
+
+.about .text-center {
+	background: rgba(255,255,255,.4)
 }

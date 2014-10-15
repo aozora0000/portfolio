@@ -175,7 +175,11 @@ hr.small {
 
 .about {
     padding: 50px 0;
-    background: #FFF 50% 0 no-repeat fixed;
+    background: url(../img/about.jpg) 50% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
     min-height: 100%;
 }
 
@@ -183,12 +187,19 @@ hr.small {
 
 .services {
     padding: 50px 0;
-    background: rgb(150,150,150) 50% 0 no-repeat fixed;
+    background: url(../img/service.jpg) 50% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
     min-height: 100%;
 }
 
 .service-item {
     margin-bottom: 30px;
+}
+.services .text-center {
+    background: rgba(0,0,0,.6);
 }
 
 /* Callout */
@@ -211,13 +222,22 @@ hr.small {
 /* Portfolio */
 
 .portfolio {
+    background: url(../img/portfolio.jpg) 50% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
     padding: 50px 0;
 }
 
 .chart {
     padding: 50px 0;
-    background: rgba(255,255,255,1) 50% 0 no-repeat fixed;
-    height:100%;
+    background: url(../img/chart.jpg) 50% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    min-height:100%;
 }
 
 .feeds {
@@ -253,7 +273,7 @@ hr.small {
 /* Map */
 .qiita {
     padding: 50px 0;
-    background: rgb(255,255,255) 50% 0 no-repeat fixed;
+    background: rgb(147, 251, 112) 50% 0 no-repeat fixed;
     min-height: 100%;
 }
 .qiita #logs {
