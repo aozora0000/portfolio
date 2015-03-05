@@ -65,7 +65,7 @@ li {
 	padding: 50px 0;
 }
 
-#logs {
+.logs {
 	max-height: 400px;
 	overflow-y:auto;
 	padding: 50px 0;
@@ -75,6 +75,7 @@ li {
 	width:100%;
 	height: 100%;
 }
+
 #chart > .container {
 	background: rgba(255,255,255,.7);
 }

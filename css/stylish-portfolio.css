@@ -276,9 +276,22 @@ hr.small {
     background: rgb(147, 251, 112) 50% 0 no-repeat fixed;
     min-height: 100%;
 }
-.qiita #logs {
+.qiita .logs {
     max-height: 80% !important;
 }
+
+.stackoverflow {
+    padding: 50px 0;
+    background: rgb(255, 156, 37) 50% 0 no-repeat fixed;
+    min-height: 100%;
+}
+
+.stackoverflow .logs {
+    max-height: 80% !important;
+}
+
+
+
 
 /* Footer */
 
