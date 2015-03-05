@@ -70,7 +70,7 @@ $(function() {
         }
     });
     $.ajax({
-        url: '/qiita',
+        url: '/qiita_lua',
         type: 'GET',
         success: function(object) {
             $.each(object,function(key,value) {
