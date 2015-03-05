@@ -74,7 +74,7 @@ $(function() {
         type: 'GET',
         success: function(object) {
             $.each(object,function(key,value) {
-                $("#qiita #logs").append(
+                $("#qiita .logs").append(
                     $("<h3>").append(
                         $("<a>").attr("href",value.url).text(value.title)
                     ),
