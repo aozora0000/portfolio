@@ -126,8 +126,7 @@ function stackoverflow() {
     feed.load(function(result) {
         var container = $("#stackoverflow .logs");
         if (!result.error) {
-            console.log(result.feed.entries);
-            for (var i = 0; i < reuslt.feed.entries.length; i++) {
+            for (var i = 0; i < result.feed.entries.length; i++) {
                 var entry = result.feed.entries[i];
                 container.append(
                     $("<h3>").append(
