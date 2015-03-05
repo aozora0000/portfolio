@@ -94,7 +94,7 @@ $(function() {
 });
 
 google.load("feeds", "1");
-google.setOnLoadCallback(github);
+google.setOnLoadCallback(github,stackoverflow);
 //GoogleAjaxFeedAPI作成
 
 function github() {
@@ -112,6 +112,28 @@ function github() {
                     $("<p>").text(entry.contentSnippet),
                     $("<small>").text(entry.publishedDate)
                 )
+            }
+        } else {
+            container.append("現在アクティビティを取得出来ません。");
+        }
+    });
+}
+
+function stackoverflow() {
+    var feed = new google.feeds.Feed("http://ja.stackoverflow.com/feeds/user/4271");
+    feed.setNumEntries(5);
+    feed.load(function(result) {
+        var container = $("#stackoverflow .logs");
+        if (!result.error) {
+            for (var i = 0; i < reuslt.feed.entries.length; i++) {
+                var entry = result.feed.entries[i];
+                container.append(
+                    $("<h3>").append(
+                        $("<a>").attr("href", entry.link).text(entry.title)
+                    ),
+                    $("<p>").text(entry.contentSnippet),
+                    $("<small>").text(entry.publishedDate)
+                );
             }
         } else {
             container.append("現在アクティビティを取得出来ません。");
