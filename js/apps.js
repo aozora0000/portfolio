@@ -94,7 +94,8 @@ $(function() {
 });
 
 google.load("feeds", "1");
-google.setOnLoadCallback(github,stackoverflow);
+google.setOnLoadCallback(github);
+google.setOnLoadCallback(stackoverflow);
 //GoogleAjaxFeedAPI作成
 
 function github() {
