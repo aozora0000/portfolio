@@ -73,8 +73,8 @@ $(function() {
         url: '/qiita_lua',
         type: 'GET',
         success: function(object) {
+            console.log(object)
             $.each(object,function(key,value) {
-                console.log(value);
                 $("#qiita .logs").append(
                     $("<h3>").append(
                         $("<a>").attr("href",value.url).text(value.title)
