@@ -60,7 +60,7 @@ $(function() {
 // Github
 $(function() {
     $.ajax({
-        url: 'http://www.aozora0000.biz/contributions',
+        url: '/contributions',
         type: 'GET',
         dataType:'html',
         success: function(result) {
@@ -70,7 +70,7 @@ $(function() {
         }
     });
     $.ajax({
-        url: 'http://www.aozora0000.biz/qiita/',
+        url: '/qiita',
         type: 'GET',
         success: function(object) {
             $.each(object,function(key,value) {
