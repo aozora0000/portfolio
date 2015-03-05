@@ -64,8 +64,6 @@ $(function() {
         type: 'GET',
         dataType:'html',
         success: function(result) {
-            //document.getElementById("contributions").innerHTML(result);
-            //$(result).inner("#contributions");
             $("#contributions").append(result);
         }
     });
@@ -73,8 +71,7 @@ $(function() {
         url: '/qiita_lua',
         type: 'GET',
         success: function(object) {
-            console.log(object)
-            $.each(object,function(key,value) {
+            $.each(object, function(key,value) {
                 $("#qiita .logs").append(
                     $("<h3>").append(
                         $("<a>").attr("href",value.url).text(value.title)
@@ -127,7 +124,7 @@ function stackoverflow() {
     feed.load(function(result) {
         var container = $("#stackoverflow .logs");
         if (!result.error) {
-            for (var i = 0; i < result.feed.entries.length; i++) {
+            for (var i = 0; i < result.feed.entries.length - 1; i++) {
                 var entry = result.feed.entries[i];
                 container.append(
                     $("<h3>").append(
