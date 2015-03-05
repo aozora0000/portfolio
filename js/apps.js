@@ -71,8 +71,7 @@ $(function() {
         url: '/qiita_lua',
         type: 'GET',
         success: function(object) {
-            console.log(JSON.parse(object));
-            $.each(object, function(key,value) {
+            $.each(JSON.parse(object), function(key,value) {
                 $("#qiita .logs").append(
                     $("<h3>").append(
                         $("<a>").attr("href",value.url).text(value.title)
